@@ -1,0 +1,2357 @@
+{
+  "metadata": {
+    "databaseName": "custodia_sena_db",
+    "engine": "Local File JSON DB + SQL Schema (Vite Middleware)",
+    "filePath": "database/db.json",
+    "sqlSchemaPath": "database/schema.sql",
+    "ficha": "ADSO 3413988 · SENA Regional Huila",
+    "lastUpdated": "2026-11-20T13:39:32.604Z",
+    "version": "4.0.0"
+  },
+  "tables": {
+    "usuarios": [
+      {
+        "id": "user-client-1795181972187",
+        "name": "hernan thomas manchola",
+        "email": "mbhernanthomas@gmail.com",
+        "password": "V10leta.",
+        "role": "user",
+        "badgeNumber": "CLIENTE-8577",
+        "rank": "Cliente / Ciudadano",
+        "phone": "3249894223",
+        "idNumber": "10772311839",
+        "department": "Comunidad Educativa y Clientes",
+        "createdAt": "20/11/2026",
+        "status": "ACTIVO"
+      },
+      {
+        "id": "user-admin-1",
+        "name": "Cap. Hernann Manchola B.",
+        "email": "admin.custodia@sena.edu.co",
+        "password": "admin123",
+        "role": "admin",
+        "badgeNumber": "ADSO-ADMIN-01",
+        "rank": "Administrador General de Custodia",
+        "phone": "+57 310 123 4567",
+        "department": "Mando Central y Asuntos Jurídicos · SENA Huila",
+        "status": "ACTIVO",
+        "createdAt": "01/01/2026"
+      },
+      {
+        "id": "user-client-1",
+        "name": "Carlos Andrés Medina",
+        "email": "carlos.medina@misena.edu.co",
+        "password": "cliente123",
+        "role": "user",
+        "badgeNumber": "CLIENTE-SENA-01",
+        "rank": "Cliente / Aprendiz SENA",
+        "phone": "+57 320 555 1234",
+        "department": "Comunidad Educativa y Clientes",
+        "status": "ACTIVO",
+        "createdAt": "10/02/2026"
+      },
+      {
+        "id": "user-employee-1",
+        "name": "Ofc. Javier Pinto Mora",
+        "email": "javier.pinto@sena.edu.co",
+        "password": "sena123",
+        "role": "employee",
+        "badgeNumber": "ADSO-REC-3413988",
+        "rank": "Oficial de Recepción y Triaje",
+        "phone": "+57 315 987 6543",
+        "department": "Centro de Recepción y Control · Bloque A",
+        "status": "ACTIVO",
+        "createdAt": "15/01/2026"
+      }
+    ],
+    "objetos_custodia": [
+      {
+        "id": "SOP-2026-0142-A",
+        "trackingCode": "SOP-2026-0142-A",
+        "title": "Apple iPhone 15 Pro Max 256GB Azul Titanio",
+        "category": "electronics",
+        "brand": "Apple",
+        "model": "iPhone 15 Pro Max (A3106)",
+        "color": "Azul Titanio",
+        "distinctMarks": "Funda de silicona negra con sticker holográfico del SENA en la esquina inferior izquierda. Leve micro-rayón cerca al puerto USB-C.",
+        "serialNumber": "F2LX9029MD6R",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-12T08:30:00Z",
+        "relativeTime": "hace 2 horas",
+        "estimatedValue": "$ 4.800.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Carlos Alberto Méndez (Vigilancia)",
+          "contact": "+57 312 456 7890",
+          "surrenderLocation": "Biblioteca Central - Sala de Cómputo 2",
+          "incidentRef": "INC-2026-0419"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-04",
+          "binNumber": "Bandeja 02",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7841",
+        "rfidTagId": "RFID-9940210142",
+        "securityQuestion": {
+          "questionType": "WALLPAPER",
+          "label": "Fondo de pantalla y código de desbloqueo",
+          "correctHint": "Fondo con foto de perro Golden Retriever (\"Rocky\") y clave PIN numérica de 6 dígitos."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-1-1",
+            "title": "Recepción y Registro en Sistema",
+            "timestamp": "12/11/2026 08:30:15",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Bien recibido por personal de vigilancia. Se verifica estado físico general encendido al 45% de batería. Sellado con precinto inviolable SEAL-2026-7841.",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "id": "tl-1-2",
+            "title": "Asignación a Casillero de Seguridad L-04",
+            "timestamp": "12/11/2026 08:34:02",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Almacenado bajo llave solenoide en Casillero L-04, Bandeja 02 de la Zona A.",
+            "hash": "8f434346648f6b96df89dda901c5176b10a6d83961dd3c1ac88b59b2dc327aa4"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-1-1",
+            "url": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80",
+            "caption": "Vista frontal de pantalla apagada y bordes de titanio",
+            "timestamp": "12/11/2026 08:31:10",
+            "sizeKb": 342
+          },
+          {
+            "id": "ev-1-2",
+            "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
+            "caption": "Inspección de cámaras traseras y funda de silicona",
+            "timestamp": "12/11/2026 08:32:00",
+            "sizeKb": 289
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0143-B",
+        "trackingCode": "SOP-2026-0143-B",
+        "title": "Billetera Vélez de Cuero Café con Documentos",
+        "category": "wallets_ids",
+        "brand": "Vélez",
+        "model": "Billetera Clásica Bifold",
+        "color": "Café Caramelo",
+        "distinctMarks": "Pespuntes dorados visibles, logo metálico de Vélez en el frente, tarjeta Cívica / SITP y billete antiguo doblado en compartimiento secreto.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-12T10:15:00Z",
+        "relativeTime": "hace 4 horas",
+        "estimatedValue": "$ 380.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "María Fernanda Ruiz (Aprendiz ADSO)",
+          "contact": "+57 300 987 6543",
+          "surrenderLocation": "Cafetería Principal - Bloque Tecnológico",
+          "incidentRef": "INC-2026-0422"
+        },
+        "location": {
+          "zone": "Zona B - Valores y Documentos",
+          "lockerNumber": "L-12",
+          "binNumber": "Bandeja 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7849",
+        "rfidTagId": "RFID-9940210143",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Documento de identidad o tarjetas internas",
+          "correctHint": "Cédula a nombre de Juan Pablo Ortiz y tarjeta Bancolombia terminada en 4412."
+        },
+        "failedAttempts": [
+          {
+            "id": "att-1",
+            "timestamp": "12/11/2026 11:45:00",
+            "claimantName": "Rodrigo Gómez",
+            "idType": "CC",
+            "idNumber": "1075283910",
+            "phone": "+57 315 222 3344",
+            "percentageScore": 42,
+            "reason": "El reclamante no acertó el color exacto ni los documentos internos. Afirmó que era negra y no poseía tarjetas.",
+            "officer": "Ofc. Hernann Manchola"
+          }
+        ],
+        "timeline": [
+          {
+            "id": "tl-2-1",
+            "title": "Recepción y Custodia Preventiva",
+            "timestamp": "12/11/2026 10:15:30",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Ingreso al centro de recepción. Documentación inventariada en sobre manila con precinto SEAL-2026-7849.",
+            "hash": "2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae"
+          },
+          {
+            "id": "tl-2-2",
+            "title": "Intento Fallido de Validación (1/4)",
+            "timestamp": "12/11/2026 11:45:10",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "warning",
+            "notes": "Intento 1 registrado. Ciudadano Rodrigo Gómez no superó el umbral mínimo (42% < 70%). Bien continúa en custodia.",
+            "hash": "fcde2b2edba56bf408601fb721fe9b5c338d10ee429ea04fae5511b68fbf8fb9"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-2-1",
+            "url": "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
+            "caption": "Inspección de cuero exterior y logotipo",
+            "timestamp": "12/11/2026 10:16:00",
+            "sizeKb": 215
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0144-C",
+        "trackingCode": "SOP-2026-0144-C",
+        "title": "Portátil Lenovo ThinkPad E14 Gen 4 Negro",
+        "category": "electronics",
+        "brand": "Lenovo",
+        "model": "ThinkPad E14 Gen 4 (21EB)",
+        "color": "Negro Mate",
+        "distinctMarks": "TrackPoint rojo distintivo, sticker de GitHub en la tapa trasera y etiqueta de inventario institucional parcialmente removida.",
+        "serialNumber": "PF4X9902A",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-11T14:20:00Z",
+        "relativeTime": "hace 1 día",
+        "estimatedValue": "$ 3.200.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Laura Restrepo (Servicios Generales)",
+          "contact": "+57 311 888 9900",
+          "surrenderLocation": "Auditorio Principal - Fila 4 Asiento 12",
+          "incidentRef": "INC-2026-0415"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-01",
+          "binNumber": "Bandeja Principal",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7810",
+        "rfidTagId": "RFID-9940210144",
+        "securityQuestion": {
+          "questionType": "PIN_PASSWORD",
+          "label": "Contraseña de usuario de Windows o correo corporativo",
+          "correctHint": "Usuario \"aprendiz.adso\" con contraseña que inicia por mayúscula y termina en 2026."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-3-1",
+            "title": "Recepción Inicial e Inspección Física",
+            "timestamp": "11/11/2026 14:20:45",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Equipo verificado sin cargador. Se custodia en locker de cómputo.",
+            "hash": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-3-1",
+            "url": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80",
+            "caption": "Equipo abierto sobre mostrador de recepción",
+            "timestamp": "11/11/2026 14:22:00",
+            "sizeKb": 412
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0145-D",
+        "trackingCode": "SOP-2026-0145-D",
+        "title": "Mochila Totto Acuarela Negra con Útiles",
+        "category": "luggage",
+        "brand": "Totto",
+        "model": "Mochila Juvenil Acuarela",
+        "color": "Negro con vivos reflectivos",
+        "distinctMarks": "Llavero de peluche de oso panda en la cremallera principal y libreta de apuntes ADSO Ficha 3413988 en el bolsillo frontal.",
+        "status": "ADVERTENCIA",
+        "registeredAt": "2026-11-10T16:00:00Z",
+        "relativeTime": "hace 2 días",
+        "estimatedValue": "$ 250.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Javier Pinto (Instructor)",
+          "contact": "+57 318 777 6655",
+          "surrenderLocation": "Ambiente de Aprendizaje 104",
+          "incidentRef": "INC-2026-0402"
+        },
+        "location": {
+          "zone": "Zona C - Maletines y Equipajes",
+          "lockerNumber": "L-20",
+          "binNumber": "Estante Inferior",
+          "isLocked": false
+        },
+        "tamperSealNumber": "SEAL-2026-7790",
+        "rfidTagId": "RFID-9940210145",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Contenido específico y nombre en los cuadernos",
+          "correctHint": "Contiene libreta con el nombre \"Manuela Castro\" y calculadora Casio fx-570."
+        },
+        "failedAttempts": [
+          {
+            "id": "att-2-1",
+            "timestamp": "11/11/2026 09:10:00",
+            "claimantName": "Pedro Nel Salazar",
+            "idType": "CC",
+            "idNumber": "12345678",
+            "phone": "+57 320 111 2233",
+            "percentageScore": 35,
+            "reason": "Aseguró que era su maletín pero dijo que contenía ropa de gimnasio.",
+            "officer": "Ofc. Hernann Manchola"
+          },
+          {
+            "id": "att-2-2",
+            "timestamp": "11/11/2026 14:00:00",
+            "claimantName": "Esteban Forero",
+            "idType": "TI",
+            "idNumber": "1098765432",
+            "phone": "+57 313 444 5566",
+            "percentageScore": 50,
+            "reason": "Falló en las marcas particulares y el contenido del bolsillo frontal.",
+            "officer": "Ofc. Hernann Manchola"
+          },
+          {
+            "id": "att-2-3",
+            "timestamp": "12/11/2026 10:30:00",
+            "claimantName": "Wilson Arango",
+            "idType": "CC",
+            "idNumber": "83920192",
+            "phone": "+57 310 999 0011",
+            "percentageScore": 40,
+            "reason": "No coincidió en la fecha ni en el aula de extravío. 3ER INTENTO FALLIDO.",
+            "officer": "Ofc. Hernann Manchola"
+          }
+        ],
+        "timeline": [
+          {
+            "id": "tl-4-1",
+            "title": "Recepción de Maletín",
+            "timestamp": "10/11/2026 16:00:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Recibido de instructor Javier Pinto. Contenido revisado superficialmente.",
+            "hash": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d"
+          },
+          {
+            "id": "tl-4-2",
+            "title": "Alerta de Riesgo: 3 Intentos Fallidos Acumulados",
+            "timestamp": "12/11/2026 10:30:45",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "warning",
+            "notes": "ADVERTENCIA: Si se registra un 4to intento fallido, el sistema aplicará bloqueo preventivo automático.",
+            "hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-4-1",
+            "url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+            "caption": "Mochila negra con llavero y cremalleras intactas",
+            "timestamp": "10/11/2026 16:05:00",
+            "sizeKb": 310
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0146-E",
+        "trackingCode": "SOP-2026-0146-E",
+        "title": "Smartwatch Samsung Galaxy Watch 6 Classic 47mm",
+        "category": "jewelry",
+        "brand": "Samsung",
+        "model": "Galaxy Watch 6 Classic Bluetooth",
+        "color": "Plateado con correa negra",
+        "distinctMarks": "Bisel giratorio con pequeño golpe a las 2 en punto. Pantalla con protector de hidrogel.",
+        "serialNumber": "R5AW800192K",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-09T11:00:00Z",
+        "relativeTime": "hace 3 días",
+        "estimatedValue": "$ 1.600.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Seguridad Privada SENA",
+          "contact": "+57 321 000 1122",
+          "surrenderLocation": "Gimnasio Institucional - Casilleros",
+          "incidentRef": "INC-2026-0390"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-02",
+          "binNumber": "Bandeja Especial",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7650",
+        "rfidTagId": "RFID-9940210146",
+        "securityHoldReason": "BLOQUEO AUTOMÁTICO DEL SISTEMA (RF-11 / CU-06): Se alcanzaron 4 intentos fallidos consecutivos de reclamación. Sospecha de suplantación de identidad. Se requiere desbloqueo administrativo y verificación de titularidad por parte de la Coordinación de Seguridad.",
+        "securityQuestion": {
+          "questionType": "PIN_PASSWORD",
+          "label": "Patrón de bloqueo táctil y cuenta Samsung vinculada",
+          "correctHint": "Patrón en forma de \"Z\" y cuenta registrada con dominio @misena.edu.co."
+        },
+        "failedAttempts": [
+          {
+            "id": "f-1",
+            "timestamp": "09/11/2026 14:00",
+            "claimantName": "Camilo S.",
+            "idType": "CC",
+            "idNumber": "107521",
+            "phone": "311...",
+            "percentageScore": 30,
+            "reason": "Falló color de la correa",
+            "officer": "Ofc. Hernann Manchola"
+          },
+          {
+            "id": "f-2",
+            "timestamp": "10/11/2026 10:15",
+            "claimantName": "Andrés R.",
+            "idType": "CC",
+            "idNumber": "107599",
+            "phone": "315...",
+            "percentageScore": 45,
+            "reason": "Falló modelo y patrón",
+            "officer": "Ofc. Hernann Manchola"
+          },
+          {
+            "id": "f-3",
+            "timestamp": "10/11/2026 16:40",
+            "claimantName": "Jorge M.",
+            "idType": "CC",
+            "idNumber": "108842",
+            "phone": "320...",
+            "percentageScore": 50,
+            "reason": "Adujo ser el hermano pero no trajo autorización",
+            "officer": "Ofc. Hernann Manchola"
+          },
+          {
+            "id": "f-4",
+            "timestamp": "11/11/2026 11:20",
+            "claimantName": "Desconocido",
+            "idType": "CC",
+            "idNumber": "998811",
+            "phone": "300...",
+            "percentageScore": 20,
+            "reason": "4TO INTENTO FALLIDO: Bloqueo de seguridad activado automáticamente.",
+            "officer": "Ofc. Hernann Manchola"
+          }
+        ],
+        "timeline": [
+          {
+            "id": "tl-5-1",
+            "title": "Ingreso al Sistema",
+            "timestamp": "09/11/2026 11:00:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Reloj en custodia en locker L-02.",
+            "hash": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+          },
+          {
+            "id": "tl-5-2",
+            "title": "ACTIVACIÓN DE BLOQUEO POR SEGURIDAD (4to Intento)",
+            "timestamp": "11/11/2026 11:20:15",
+            "officer": "Sistema Autónomo de Custodia",
+            "officerBadge": "SYS-SECURITY",
+            "status": "security_hold",
+            "notes": "RF-11: Bloqueo irreversible para rol empleado. Requiere auditoría y desbloqueo exclusivo de Administrador (RF-15).",
+            "hash": "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-5-1",
+            "url": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
+            "caption": "Smartwatch en bandeja de custodia con precinto",
+            "timestamp": "09/11/2026 11:05:00",
+            "sizeKb": 260
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0147-F",
+        "trackingCode": "SOP-2026-0147-F",
+        "title": "Audífonos Inalámbricos Sony WH-1000XM5 Plata",
+        "category": "electronics",
+        "brand": "Sony",
+        "model": "WH-1000XM5 Wireless Noise Cancelling",
+        "color": "Plata Platino",
+        "distinctMarks": "Estuche de viaje rígido original color gris con cable 3.5mm dorado y adaptador para avión.",
+        "serialNumber": "S01-8492048-M",
+        "status": "ENTREGADO",
+        "registeredAt": "2026-11-08T09:00:00Z",
+        "relativeTime": "hace 4 días",
+        "estimatedValue": "$ 1.850.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Andrés Felipe Morales (Estudiante)",
+          "contact": "+57 316 555 4433",
+          "surrenderLocation": "Laboratorio de Software ADSO",
+          "incidentRef": "INC-2026-0375"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-08",
+          "binNumber": "Bandeja 03",
+          "isLocked": false
+        },
+        "tamperSealNumber": "SEAL-2026-7501",
+        "rfidTagId": "RFID-9940210147",
+        "failedAttempts": [],
+        "claimant": {
+          "fullName": "Valentina Sterling Vargas",
+          "idType": "CC",
+          "idNumber": "1075304918",
+          "phone": "+57 317 400 9988",
+          "email": "valentina.sterling@correo.com",
+          "verifiedTimestamp": "10/11/2026 15:45:00",
+          "verifyingOfficer": "Ofc. Hernann Manchola",
+          "officerBadge": "ADSO-3413988",
+          "coincidencePercentage": 95,
+          "deliveryCertificateHash": "CERT-DELIV-2026-0147-SHA256-88A9F0",
+          "notes": "Titular demostró conexión Bluetooth en vivo desde su smartphone, presentó factura de compra y coincidió al 95% en todas las referencias."
+        },
+        "timeline": [
+          {
+            "id": "tl-6-1",
+            "title": "Registro de Ingreso a Custodia",
+            "timestamp": "08/11/2026 09:00:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Bien en perfecto estado con estuche completo.",
+            "hash": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
+          },
+          {
+            "id": "tl-6-2",
+            "title": "Protocolo de Validación Exitoso (95%)",
+            "timestamp": "10/11/2026 15:40:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Coincidencia supera con creces el umbral del 80%. Aprobado.",
+            "hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+          },
+          {
+            "id": "tl-6-3",
+            "title": "Entrega Formal y Baja Lógica (Soft Delete)",
+            "timestamp": "10/11/2026 15:45:12",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Acta firmada digitalmente por Valentina Sterling Vargas (CC 1075304918). Bien retirado del catálogo público.",
+            "hash": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-6-1",
+            "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+            "caption": "Audífonos en su estuche de viaje rígido",
+            "timestamp": "08/11/2026 09:05:00",
+            "sizeKb": 380
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0148-G",
+        "trackingCode": "SOP-2026-0148-G",
+        "title": "iPad Air M2 11\" Gris Espacial con Apple Pencil Pro",
+        "category": "electronics",
+        "brand": "Apple",
+        "model": "iPad Air 6ta Gen (A2902)",
+        "color": "Gris Espacial",
+        "distinctMarks": "Funda magnética tipo folio color verde oliva. El Apple Pencil tiene grabado láser con las iniciales \"D.M.R.\"",
+        "serialNumber": "DLX8841209KP",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-13T09:15:00Z",
+        "relativeTime": "hace 3 horas",
+        "estimatedValue": "$ 3.400.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Ing. Roberto Lozano (Instructor Diseño)",
+          "contact": "+57 314 220 8891",
+          "surrenderLocation": "Taller de Multimedia y Diseño - Ambiente 302",
+          "incidentRef": "INC-2026-0430"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-03",
+          "binNumber": "Bandeja 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7850",
+        "rfidTagId": "RFID-9940210148",
+        "securityQuestion": {
+          "questionType": "WALLPAPER",
+          "label": "Grabado láser del Apple Pencil y fondo de bloqueo",
+          "correctHint": "Iniciales D.M.R. en el lápiz y fondo de ilustración vectorial minimalista."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-7-1",
+            "title": "Recepción y Custodia en Bóveda",
+            "timestamp": "13/11/2026 09:15:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Tableta recibida con lápiz óptico adherido magnéticamente.",
+            "hash": "7d865e959b2466918c9863afca942d0fb89d7c9ac0c99bafc3749504ded97730"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-7-1",
+            "url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80",
+            "caption": "iPad Air sobre superficie blanca de inspección",
+            "timestamp": "13/11/2026 09:18:00",
+            "sizeKb": 295
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0149-H",
+        "trackingCode": "SOP-2026-0149-H",
+        "title": "Llavero Inteligente de Vehículo Mazda CX-30 con AirTag",
+        "category": "keys",
+        "brand": "Mazda",
+        "model": "Smart Key Fob 4 Botones",
+        "color": "Negro Satinado y Cromo",
+        "distinctMarks": "Incluye AirTag en portallaves de cuero marrón y dos llaves de seguridad marca Yale.",
+        "serialNumber": "MZD-KEY-8821",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-13T10:40:00Z",
+        "relativeTime": "hace 5 horas",
+        "estimatedValue": "$ 950.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Humberto Díaz (Guarda Parqueadero)",
+          "contact": "+57 310 554 1123",
+          "surrenderLocation": "Parqueadero Central de Instructores - Zona Norte",
+          "incidentRef": "INC-2026-0432"
+        },
+        "location": {
+          "zone": "Zona B - Valores y Documentos",
+          "lockerNumber": "L-05",
+          "binNumber": "Gancho 04",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7852",
+        "rfidTagId": "RFID-9940210149",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Nombre asignado al AirTag o placa del vehículo",
+          "correctHint": "Placa terminada en 84B de Neiva y llavero de cuero grabado."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-8-1",
+            "title": "Ingreso de Llavero Inteligente",
+            "timestamp": "13/11/2026 10:40:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Recibido de ronda de vigilancia en parqueadero norte.",
+            "hash": "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-8-1",
+            "url": "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=800&q=80",
+            "caption": "Control electrónico y llaves adicionales",
+            "timestamp": "13/11/2026 10:42:00",
+            "sizeKb": 240
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0150-I",
+        "trackingCode": "SOP-2026-0150-I",
+        "title": "Cámara Mirrorless Canon EOS R50 Lente 18-45mm",
+        "category": "electronics",
+        "brand": "Canon",
+        "model": "EOS R50 RF-S 18-45mm",
+        "color": "Negro Carbón",
+        "distinctMarks": "Correa tejida Peak Design con anclajes rojos y tarjeta SD SanDisk Extreme Pro de 128GB en su interior.",
+        "serialNumber": "CN-4920184930",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-13T11:20:00Z",
+        "relativeTime": "hace 6 horas",
+        "estimatedValue": "$ 3.900.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Sofía Vergara (Aprendiz Producción Multimedia)",
+          "contact": "+57 315 889 4410",
+          "surrenderLocation": "Plazoleta Central SENA CIES - Bancas de Concreto",
+          "incidentRef": "INC-2026-0435"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-06",
+          "binNumber": "Bandeja 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7855",
+        "rfidTagId": "RFID-9940210150",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Contenido de las últimas fotografías en la memoria SD",
+          "correctHint": "Sesión fotográfica de práctica de retratos en el edificio de agroindustria."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-9-1",
+            "title": "Registro y Resguardo Óptico",
+            "timestamp": "13/11/2026 11:20:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Cámara con tapa de lente original y batería al 80%.",
+            "hash": "b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef012"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-9-1",
+            "url": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80",
+            "caption": "Cuerpo de cámara Canon con lente montado",
+            "timestamp": "13/11/2026 11:22:00",
+            "sizeKb": 315
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0151-J",
+        "trackingCode": "SOP-2026-0151-J",
+        "title": "Reloj Tissot PRX Powermatic 80 Acero Inoxidable",
+        "category": "jewelry",
+        "brand": "Tissot",
+        "model": "PRX Powermatic 80 40mm",
+        "color": "Acero Plateado / Esfera Azul",
+        "distinctMarks": "Esfera texturizada tipo waffle azul oscuro, brazalete integrado con micro-rayaduras de uso en el cierre mariposa.",
+        "serialNumber": "TST-993018A",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-13T13:05:00Z",
+        "relativeTime": "hace 7 horas",
+        "estimatedValue": "$ 3.100.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "camarera Turno Tarde (Aseo Institucional)",
+          "contact": "+57 312 330 9182",
+          "surrenderLocation": "Lavamanos Baño Administrativo - Piso 2 Bloque A",
+          "incidentRef": "INC-2026-0438"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-07",
+          "binNumber": "Cofre Joyería 02",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7860",
+        "rfidTagId": "RFID-9940210151",
+        "securityQuestion": {
+          "questionType": "HIDDEN_SERIAL",
+          "label": "Inscripción personalizada en la tapa trasera o número de eslabones",
+          "correctHint": "Grabado conmemorativo \"Grado Ingeniería 2025\" en el borde posterior."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-10-1",
+            "title": "Custodia en Cofre de Alta Seguridad",
+            "timestamp": "13/11/2026 13:05:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Reloj mecánico automático funcionando correctamente.",
+            "hash": "c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef01234"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-10-1",
+            "url": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=80",
+            "caption": "Reloj de acero inoxidable en bandeja blanca",
+            "timestamp": "13/11/2026 13:08:00",
+            "sizeKb": 280
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0152-K",
+        "trackingCode": "SOP-2026-0152-K",
+        "title": "Gafas de Sol Ray-Ban Clubmaster Clásicas con Estuche",
+        "category": "other",
+        "brand": "Ray-Ban",
+        "model": "Clubmaster RB3016",
+        "color": "Carey / Dorado",
+        "distinctMarks": "Estuche de cuero marrón original con paño de microfibra gris y fórmula óptica dentro del estuche.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-13T14:10:00Z",
+        "relativeTime": "hace 8 horas",
+        "estimatedValue": "$ 720.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Camilo Andrés Perdomo (Aprendiz)",
+          "contact": "+57 318 654 3210",
+          "surrenderLocation": "Cancha Múltiple Cubierta - Graderías",
+          "incidentRef": "INC-2026-0441"
+        },
+        "location": {
+          "zone": "Zona B - Valores y Documentos",
+          "lockerNumber": "L-09",
+          "binNumber": "Bandeja 02",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7863",
+        "rfidTagId": "RFID-9940210152",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Nombre de la óptica en el paño o documento dentro del estuche",
+          "correctHint": "Recibo de Óptica Lafam a nombre de Natalia Solano."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-11-1",
+            "title": "Recepción en Ventanilla",
+            "timestamp": "13/11/2026 14:10:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Lentes sin rayaduras visibles en cristales.",
+            "hash": "d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-11-1",
+            "url": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80",
+            "caption": "Gafas Ray-Ban sobre fondo blanco de estudio",
+            "timestamp": "13/11/2026 14:12:00",
+            "sizeKb": 230
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0153-L",
+        "trackingCode": "SOP-2026-0153-L",
+        "title": "Disco Duro Externo SSD SanDisk Extreme Portable 2TB",
+        "category": "electronics",
+        "brand": "SanDisk",
+        "model": "Extreme Portable SSD V2 2TB",
+        "color": "Negro con Mosquetón Naranja",
+        "distinctMarks": "Cinta adhesiva blanca en el reverso con la etiqueta manuscrita \"BACKUP ADSO PROYECTO FINAL\". Incluye cable corto USB-C.",
+        "serialNumber": "SD-2209481920",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-13T15:30:00Z",
+        "relativeTime": "hace 9 horas",
+        "estimatedValue": "$ 890.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Miguel Ángel Tovar (Monitor Sala)",
+          "contact": "+57 320 998 7766",
+          "surrenderLocation": "Ambiente de Desarrollo de Software 204",
+          "incidentRef": "INC-2026-0445"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-10",
+          "binNumber": "Bandeja 03",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7868",
+        "rfidTagId": "RFID-9940210153",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Nombres de las carpetas principales dentro de la unidad SSD",
+          "correctHint": "Carpetas \"Arquitectura_Spring_Boot\", \"React_Vite_SENA\" y \"Bases_Datos_PostgreSQL\"."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-12-1",
+            "title": "Ingreso de Unidad de Almacenamiento",
+            "timestamp": "13/11/2026 15:30:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Unidad SSD entregada junto con cable USB-C a USB-C.",
+            "hash": "e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef012345678"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-12-1",
+            "url": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=800&q=80",
+            "caption": "Disco estado sólido portátil en custodia",
+            "timestamp": "13/11/2026 15:32:00",
+            "sizeKb": 265
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0154-M",
+        "trackingCode": "SOP-2026-0154-M",
+        "title": "Termo Stanley Quencher H2.0 FlowState 40 oz",
+        "category": "other",
+        "brand": "Stanley",
+        "model": "Quencher H2.0 1.18L",
+        "color": "Blanco Cuarzo Mate",
+        "distinctMarks": "Base protectora de silicona transparente y calcomanía de café del Huila en el costado.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-13T16:15:00Z",
+        "relativeTime": "hace 10 horas",
+        "estimatedValue": "$ 260.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Personal de Cafetería SENA",
+          "contact": "+57 311 445 6677",
+          "surrenderLocation": "Mesas Exteriores Cafetería Central",
+          "incidentRef": "INC-2026-0449"
+        },
+        "location": {
+          "zone": "Zona C - Maletines y Equipajes",
+          "lockerNumber": "L-11",
+          "binNumber": "Estante 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7871",
+        "rfidTagId": "RFID-9940210154",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Sticker específico adherido en la parte inferior del termo",
+          "correctHint": "Calcomanía de \"Especialidad Café San Agustín Huila\"."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-13-1",
+            "title": "Registro y Sanitización",
+            "timestamp": "13/11/2026 16:15:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Termo almacenado en casillero L-11.",
+            "hash": "f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789a"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-13-1",
+            "url": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80",
+            "caption": "Termo metálico blanco sobre fondo neutro",
+            "timestamp": "13/11/2026 16:18:00",
+            "sizeKb": 210
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0155-N",
+        "trackingCode": "SOP-2026-0155-N",
+        "title": "AirPods Pro (2da Generación) Estuche MagSafe USB-C",
+        "category": "electronics",
+        "brand": "Apple",
+        "model": "AirPods Pro 2nd Gen (A3048)",
+        "color": "Blanco",
+        "distinctMarks": "Carcasa protectora rígida color negro mate marca Spigen con mosquetón metálico.",
+        "serialNumber": "GX9L029184MM",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-14T07:50:00Z",
+        "relativeTime": "hace 11 horas",
+        "estimatedValue": "$ 1.150.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Daniela Ospina (Aprendiz Contabilidad)",
+          "contact": "+57 317 880 1122",
+          "surrenderLocation": "Sala de Lectura Silenciosa - Biblioteca",
+          "incidentRef": "INC-2026-0452"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-13",
+          "binNumber": "Bandeja 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7875",
+        "rfidTagId": "RFID-9940210155",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Nombre Bluetooth con el que aparecen los AirPods al emparejar",
+          "correctHint": "Aparecen como \"AirPods de Santiago V.\" y emiten tono desde app Encontrar."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-14-1",
+            "title": "Recepción en Custodia",
+            "timestamp": "14/11/2026 07:50:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Ambos auriculares (L y R) presentes dentro del estuche de carga.",
+            "hash": "0718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789ab1"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-14-1",
+            "url": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=800&q=80",
+            "caption": "Estuche de carga AirPods Pro y auriculares",
+            "timestamp": "14/11/2026 07:52:00",
+            "sizeKb": 225
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0156-O",
+        "trackingCode": "SOP-2026-0156-O",
+        "title": "Tarjetero Montblanc Sartorial de Piel Negra",
+        "category": "wallets_ids",
+        "brand": "Montblanc",
+        "model": "Sartorial 6cc Card Holder",
+        "color": "Negro",
+        "distinctMarks": "Emblema de estrella blanca con borde paladio. Contiene carné de instructor SENA y tarjeta débito Davivienda.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-14T08:40:00Z",
+        "relativeTime": "hace 12 horas",
+        "estimatedValue": "$ 1.100.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Vigilancia Portería Peatonal",
+          "contact": "+57 313 200 4455",
+          "surrenderLocation": "Torniquetes de Acceso Principal Carrera 19",
+          "incidentRef": "INC-2026-0456"
+        },
+        "location": {
+          "zone": "Zona B - Valores y Documentos",
+          "lockerNumber": "L-14",
+          "binNumber": "Bandeja 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7879",
+        "rfidTagId": "RFID-9940210156",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Nombre completo en el carné institucional y últimos 4 dígitos de tarjeta",
+          "correctHint": "Carné a nombre de Mauricio Andrade y tarjeta Davivienda terminada en 9018."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-15-1",
+            "title": "Custodia de Documentos y Valores",
+            "timestamp": "14/11/2026 08:40:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Tarjetero sellado en bolsa de seguridad.",
+            "hash": "18293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789ab123"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-15-1",
+            "url": "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
+            "caption": "Tarjetero de cuero fino en bandeja de recepción",
+            "timestamp": "14/11/2026 08:43:00",
+            "sizeKb": 245
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0157-P",
+        "trackingCode": "SOP-2026-0157-P",
+        "title": "Teclado Mecánico Inalámbrico Keychron K2 Pro",
+        "category": "electronics",
+        "brand": "Keychron",
+        "model": "K2 Pro QMK/VIA Wireless",
+        "color": "Gris / Teclas Negro y Rojo",
+        "distinctMarks": "Switches táctiles marrones, tecla Escape roja personalizada con ícono de código y estuche de fieltro gris.",
+        "serialNumber": "KC-K2P-883920",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-14T09:30:00Z",
+        "relativeTime": "hace 14 horas",
+        "estimatedValue": "$ 620.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Juan Sebastián Rojas (Aprendiz ADSO)",
+          "contact": "+57 319 443 2211",
+          "surrenderLocation": "Laboratorio de Redes y Servidores - Ambiente 201",
+          "incidentRef": "INC-2026-0460"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-15",
+          "binNumber": "Bandeja 02",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7882",
+        "rfidTagId": "RFID-9940210157",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Teclas personalizadas reemplazadas en la fila superior",
+          "correctHint": "Tecla ESC roja y tecla Enter con leyenda \"DEPLOY\"."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-16-1",
+            "title": "Registro de Periférico de Cómputo",
+            "timestamp": "14/11/2026 09:30:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Teclado recibido dentro de funda de fieltro protectora.",
+            "hash": "293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789ab12345"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-16-1",
+            "url": "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=800&q=80",
+            "caption": "Teclado mecánico compacto 75%",
+            "timestamp": "14/11/2026 09:33:00",
+            "sizeKb": 330
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0158-Q",
+        "trackingCode": "SOP-2026-0158-Q",
+        "title": "Chaqueta Impermeable The North Face Venture 2",
+        "category": "clothing",
+        "brand": "The North Face",
+        "model": "Venture 2 DryVent Jacket",
+        "color": "Negro Mate",
+        "distinctMarks": "Talla M. En el bolsillo izquierdo interno tiene un par de guantes de nitrilo y un llavero con cinta SENA.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-14T10:15:00Z",
+        "relativeTime": "hace 15 horas",
+        "estimatedValue": "$ 580.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Personal de Aseo Auditorio",
+          "contact": "+57 310 229 3344",
+          "surrenderLocation": "Auditorio Principal CIES - Respaldo Silla Fila 2",
+          "incidentRef": "INC-2026-0464"
+        },
+        "location": {
+          "zone": "Zona C - Maletines y Equipajes",
+          "lockerNumber": "L-16",
+          "binNumber": "Perchero 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7886",
+        "rfidTagId": "RFID-9940210158",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Objetos guardados dentro del bolsillo interno con cremallera",
+          "correctHint": "Llavero con cinta verde SENA y memoria USB Kingston metálica."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-17-1",
+            "title": "Ingreso de Prenda a Guarda Física",
+            "timestamp": "14/11/2026 10:15:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Prenda doblada en bolsa transpirable sellada.",
+            "hash": "3a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789ab1234567"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-17-1",
+            "url": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
+            "caption": "Chaqueta negra impermeable en custodia",
+            "timestamp": "14/11/2026 10:18:00",
+            "sizeKb": 290
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0159-R",
+        "trackingCode": "SOP-2026-0159-R",
+        "title": "Calculadora Científica Graficadora Casio fx-CG50",
+        "category": "electronics",
+        "brand": "Casio",
+        "model": "fx-CG50 PRIZM Color Graph",
+        "color": "Negro / Blanco",
+        "distinctMarks": "Tapa deslizante dura con tabla periódica adherida por dentro y nombre \"K. Trujillo\" escrito con marcador indeleble.",
+        "serialNumber": "CS-77482910",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-14T11:50:00Z",
+        "relativeTime": "hace 16 horas",
+        "estimatedValue": "$ 690.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Ing. Carlos Julio Paredes (Instructor Física)",
+          "contact": "+57 316 778 9900",
+          "surrenderLocation": "Laboratorio de Metrología y Electrónica - Piso 1",
+          "incidentRef": "INC-2026-0468"
+        },
+        "location": {
+          "zone": "Zona B - Valores y Documentos",
+          "lockerNumber": "L-17",
+          "binNumber": "Bandeja 02",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7890",
+        "rfidTagId": "RFID-9940210159",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Inscripción en la parte interior de la tapa deslizante",
+          "correctHint": "Nombre \"K. Trujillo\" y ficha de Electromecánica."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-18-1",
+            "title": "Recepción en Custodia",
+            "timestamp": "14/11/2026 11:50:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Calculadora operativa con pilas AAA completas.",
+            "hash": "4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789ab123456789"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-18-1",
+            "url": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?auto=format&fit=crop&w=800&q=80",
+            "caption": "Calculadora científica con tapa protectora",
+            "timestamp": "14/11/2026 11:52:00",
+            "sizeKb": 250
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0160-S",
+        "trackingCode": "SOP-2026-0160-S",
+        "title": "Maletín Portafolio Samsonite Xenon 3.0 Slim",
+        "category": "luggage",
+        "brand": "Samsonite",
+        "model": "Xenon 3.0 Tech Locker Brief",
+        "color": "Negro Balístico",
+        "distinctMarks": "Correa de hombro acolchada, contiene carpeta con planos arquitectónicos de remodelación y escalímetro triangular.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-14T13:20:00Z",
+        "relativeTime": "hace 18 horas",
+        "estimatedValue": "$ 540.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Arq. Fernando Quintero",
+          "contact": "+57 315 332 1100",
+          "surrenderLocation": "Ambiente de Construcción y Topografía - Bloque D",
+          "incidentRef": "INC-2026-0471"
+        },
+        "location": {
+          "zone": "Zona C - Maletines y Equipajes",
+          "lockerNumber": "L-18",
+          "binNumber": "Estante Central",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7894",
+        "rfidTagId": "RFID-9940210160",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Título de los planos y marca del escalímetro interno",
+          "correctHint": "Planos \"Planta Estructural Centro Biotecnológico\" y escalímetro Staedtler."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-19-1",
+            "title": "Registro y Custodia de Equipaje",
+            "timestamp": "14/11/2026 13:20:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Maletín asegurado en casillero L-18.",
+            "hash": "5c6d7e8f90123456789abcdef0123456789abcdef0123456789ab123456789ab"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-19-1",
+            "url": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80",
+            "caption": "Maletín ejecutivo negro de nylon balístico",
+            "timestamp": "14/11/2026 13:23:00",
+            "sizeKb": 310
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0161-T",
+        "trackingCode": "SOP-2026-0161-T",
+        "title": "Smartphone Samsung Galaxy S24 Ultra 512GB Gris Titanio",
+        "category": "electronics",
+        "brand": "Samsung",
+        "model": "Galaxy S24 Ultra (SM-S928B)",
+        "color": "Gris Titanio",
+        "distinctMarks": "S-Pen color amarillo titanio, estuche MagSafe Kevlar fibra de carbono.",
+        "serialNumber": "R5CT910293W",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-14T14:45:00Z",
+        "relativeTime": "hace 20 horas",
+        "estimatedValue": "$ 5.200.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Coordinación Académica CIES",
+          "contact": "+57 310 887 6655",
+          "surrenderLocation": "Sala de Juntas Subdirección - Piso 3",
+          "incidentRef": "INC-2026-0475"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-19",
+          "binNumber": "Bandeja 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7898",
+        "rfidTagId": "RFID-9940210161",
+        "securityQuestion": {
+          "questionType": "WALLPAPER",
+          "label": "Imagen de pantalla de bloqueo Always-On y contacto de emergencia",
+          "correctHint": "Fotografía del Desierto de la Tatacoa y contacto de emergencia \"Mamá Elena\"."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-20-1",
+            "title": "Ingreso a Bóveda de Alta Seguridad",
+            "timestamp": "14/11/2026 14:45:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Terminal móvil en modo avión para preservar batería.",
+            "hash": "6d7e8f90123456789abcdef0123456789abcdef0123456789ab123456789abcd"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-20-1",
+            "url": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80",
+            "caption": "Smartphone Samsung S24 Ultra con S-Pen",
+            "timestamp": "14/11/2026 14:47:00",
+            "sizeKb": 305
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0162-U",
+        "trackingCode": "SOP-2026-0162-U",
+        "title": "Casco Integral Certificación ECE 22.06 AGV K3",
+        "category": "other",
+        "brand": "AGV",
+        "model": "K3 SV Rossi Monochrome",
+        "color": "Negro Mate / Visor Iridium",
+        "distinctMarks": "Intercomunicador Bluetooth Cardo Spirit instalado en el lateral izquierdo y visor oscuro.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-15T07:30:00Z",
+        "relativeTime": "hace 1 día",
+        "estimatedValue": "$ 1.250.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Guarda Motorizado Turno Mañana",
+          "contact": "+57 312 776 5544",
+          "surrenderLocation": "Parqueadero de Motocicletas Aprendices - Sector Sur",
+          "incidentRef": "INC-2026-0479"
+        },
+        "location": {
+          "zone": "Zona C - Maletines y Equipajes",
+          "lockerNumber": "L-21",
+          "binNumber": "Compartimiento XL",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7902",
+        "rfidTagId": "RFID-9940210162",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Talla exacta del casco y sticker de grupo sanguíneo trasero",
+          "correctHint": "Talla L (59-60 cm) y sticker \"O+ RH Positivo\" en la nuca."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-21-1",
+            "title": "Resguardo en Casillero XL",
+            "timestamp": "15/11/2026 07:30:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Casco con intercomunicador Cardo funcional.",
+            "hash": "7e8f90123456789abcdef0123456789abcdef0123456789ab123456789abcdef"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-21-1",
+            "url": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80",
+            "caption": "Casco integral negro con intercomunicador",
+            "timestamp": "15/11/2026 07:33:00",
+            "sizeKb": 350
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0163-V",
+        "trackingCode": "SOP-2026-0163-V",
+        "title": "Mouse Inalámbrico Ergonómico Logitech MX Master 3S",
+        "category": "electronics",
+        "brand": "Logitech",
+        "model": "MX Master 3S Wireless",
+        "color": "Grafito Oscuro",
+        "distinctMarks": "Incluye receptor USB Logi Bolt insertado en estuche rígido de EVA gris.",
+        "serialNumber": "LOGI-23948102",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-15T09:10:00Z",
+        "relativeTime": "hace 1 día",
+        "estimatedValue": "$ 480.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Valeria Gómez (Aprendiz ADSO)",
+          "contact": "+57 318 221 9090",
+          "surrenderLocation": "Sala de Co-Working y Emprendimiento Fondo Emprender",
+          "incidentRef": "INC-2026-0483"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-22",
+          "binNumber": "Bandeja 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7906",
+        "rfidTagId": "RFID-9940210163",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Marca y color del cable de carga guardado dentro del estuche del mouse",
+          "correctHint": "Cable trenzado Anker color rojo de 1 metro."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-22-1",
+            "title": "Recepción de Accesorio Informático",
+            "timestamp": "15/11/2026 09:10:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Mouse con receptor USB Logi Bolt verificado.",
+            "hash": "8f90123456789abcdef0123456789abcdef0123456789ab123456789abcdef01"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-22-1",
+            "url": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80",
+            "caption": "Mouse ergonómico Logitech en estudio",
+            "timestamp": "15/11/2026 09:12:00",
+            "sizeKb": 215
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0164-W",
+        "trackingCode": "SOP-2026-0164-W",
+        "title": "Pulsera Pandora Moments Cadena de Serpiente Plata 925",
+        "category": "jewelry",
+        "brand": "Pandora",
+        "model": "Moments Silver Charm Bracelet",
+        "color": "Plata Esterlina 925",
+        "distinctMarks": "Tiene 4 charms: un birrete de graduación, un avión, un corazón con cristal azul y una letra \"M\".",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-15T11:25:00Z",
+        "relativeTime": "hace 1 día",
+        "estimatedValue": "$ 920.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Instructora Claudia Patricia Ríos",
+          "contact": "+57 314 556 7788",
+          "surrenderLocation": "Laboratorio de Biotecnología y Química",
+          "incidentRef": "INC-2026-0488"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-23",
+          "binNumber": "Cofre Joyería 03",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7910",
+        "rfidTagId": "RFID-9940210164",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Descripción exacta de los 4 dijes (charms) que componen la pulsera",
+          "correctHint": "Birrete de grado, avión, corazón azul y letra M."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-23-1",
+            "title": "Custodia de Joyería en Cofre",
+            "timestamp": "15/11/2026 11:25:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Pulsera inventariada con 4 charms de plata.",
+            "hash": "90123456789abcdef0123456789abcdef0123456789ab123456789abcdef0123"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-23-1",
+            "url": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80",
+            "caption": "Pulsera de plata 925 sobre superficie blanca",
+            "timestamp": "15/11/2026 11:28:00",
+            "sizeKb": 235
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0165-X",
+        "trackingCode": "SOP-2026-0165-X",
+        "title": "Tableta Gráfica Wacom Intuos Pro Medium Bluetooth",
+        "category": "electronics",
+        "brand": "Wacom",
+        "model": "Intuos Pro Medium (PTH-660)",
+        "color": "Negro Anodizado",
+        "distinctMarks": "Incluye Wacom Pro Pen 2 con base portapuntas metálica y anillo identificador color plata.",
+        "serialNumber": "WCM-660-91827",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-15T14:00:00Z",
+        "relativeTime": "hace 1 día",
+        "estimatedValue": "$ 1.750.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Felipe Calderón (Aprendiz Animación 3D)",
+          "contact": "+57 311 990 8877",
+          "surrenderLocation": "Ambiente de Animación Digital y Render - Bloque C",
+          "incidentRef": "INC-2026-0492"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-24",
+          "binNumber": "Bandeja 02",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7915",
+        "rfidTagId": "RFID-9940210165",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Desgaste o marca en la lámina de textura y puntas de repuesto en la base",
+          "correctHint": "Base con 6 puntas de fieltro gris y sticker con logo de Blender en el reverso."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-24-1",
+            "title": "Registro y Custodia Técnica",
+            "timestamp": "15/11/2026 14:00:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Tableta digitalizadora completa con lápiz y base.",
+            "hash": "0123456789abcdef0123456789abcdef0123456789ab123456789abcdef01234"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-24-1",
+            "url": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=800&q=80",
+            "caption": "Tableta digitalizadora de diseño profesional",
+            "timestamp": "15/11/2026 14:03:00",
+            "sizeKb": 275
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0166-Y",
+        "trackingCode": "SOP-2026-0166-Y",
+        "title": "Parlante Portátil JBL Flip 6 Waterproof",
+        "category": "electronics",
+        "brand": "JBL",
+        "model": "Flip 6 Bluetooth Speaker",
+        "color": "Negro Carbón",
+        "distinctMarks": "Cordón de sujeción con nudo doble y pequeña marca de pintura blanca cerca de la rejilla pasiva.",
+        "serialNumber": "JBL-FL6-449102",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-15T16:20:00Z",
+        "relativeTime": "hace 2 días",
+        "estimatedValue": "$ 520.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Instructor de Cultura Física SENA",
+          "contact": "+57 315 667 8899",
+          "surrenderLocation": "Gimnasio y Zona de Bienestar al Aprendiz",
+          "incidentRef": "INC-2026-0496"
+        },
+        "location": {
+          "zone": "Zona B - Valores y Documentos",
+          "lockerNumber": "L-25",
+          "binNumber": "Bandeja 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7919",
+        "rfidTagId": "RFID-9940210166",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Dispositivo móvil habitual vinculado en la memoria Bluetooth del parlante",
+          "correctHint": "Se conecta automáticamente al dispositivo \"Xiaomi 13T de Julián\"."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-25-1",
+            "title": "Ingreso a Custodia",
+            "timestamp": "15/11/2026 16:20:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Altavoz portátil almacenado en casillero L-25.",
+            "hash": "123456789abcdef0123456789abcdef0123456789ab123456789abcdef012345"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-25-1",
+            "url": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80",
+            "caption": "Altavoz cilíndrico Bluetooth en recepción",
+            "timestamp": "15/11/2026 16:23:00",
+            "sizeKb": 260
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0167-Z",
+        "trackingCode": "SOP-2026-0167-Z",
+        "title": "Pasaporte Colombiano y Carpeta de Certificados Apostillados",
+        "category": "documents",
+        "brand": "Cancillería de Colombia",
+        "model": "Pasaporte Ordinario Biométrico",
+        "color": "Vinotinto / Carpeta Negra",
+        "distinctMarks": "Portapasaporte de cuero negro liso con visa estadounidense vigente y certificados de competencias SENA.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-16T08:00:00Z",
+        "relativeTime": "hace 2 días",
+        "estimatedValue": "Documento Oficial Invaluable",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Secretaría Agencia Pública de Empleo SENA",
+          "contact": "+57 310 112 3344",
+          "surrenderLocation": "Oficina Agencia Pública de Empleo (APE) - Sala de Espera",
+          "incidentRef": "INC-2026-0501"
+        },
+        "location": {
+          "zone": "Zona B - Valores y Documentos",
+          "lockerNumber": "L-26",
+          "binNumber": "Bandeja Documental 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7924",
+        "rfidTagId": "RFID-9940210167",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Nombre completo del titular del pasaporte y número de cédula",
+          "correctHint": "Titular Gabriela Mendoza Peralta, documento expedido en Neiva."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-26-1",
+            "title": "Resguardo Prioritario de Documentos Oficiales",
+            "timestamp": "16/11/2026 08:00:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Documentación sellada en sobre de seguridad.",
+            "hash": "23456789abcdef0123456789abcdef0123456789ab123456789abcdef0123456"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-26-1",
+            "url": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+            "caption": "Carpeta portadocumentos y pasaporte en custodia",
+            "timestamp": "16/11/2026 08:03:00",
+            "sizeKb": 240
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0168-AA",
+        "trackingCode": "SOP-2026-0168-AA",
+        "title": "Batería Portátil Anker Prime Power Bank 20,000mAh 200W",
+        "category": "electronics",
+        "brand": "Anker",
+        "model": "Prime 20,000mAh (A1336)",
+        "color": "Gris Metálico / Pantalla Digital",
+        "distinctMarks": "Pantalla LCD frontal que muestra porcentaje exacto y ciclos de batería. Funda de malla gris incluida.",
+        "serialNumber": "ANK-9940182",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-16T10:30:00Z",
+        "relativeTime": "hace 2 días",
+        "estimatedValue": "$ 590.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "David Santiago Pérez (Aprendiz)",
+          "contact": "+57 316 998 1212",
+          "surrenderLocation": "Estación de Carga Solar - Plazoleta SENA",
+          "incidentRef": "INC-2026-0505"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-27",
+          "binNumber": "Bandeja 02",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7928",
+        "rfidTagId": "RFID-9940210168",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Qué cable adicional viene guardado dentro de la bolsa de malla gris",
+          "correctHint": "Cable USB-C MagSafe 3 trenzado para MacBook."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-27-1",
+            "title": "Registro en Bóveda",
+            "timestamp": "16/11/2026 10:30:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Power Bank verificado al 92% de carga.",
+            "hash": "3456789abcdef0123456789abcdef0123456789ab123456789abcdef01234567"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-27-1",
+            "url": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=800&q=80",
+            "caption": "Batería externa de alta capacidad en custodia",
+            "timestamp": "16/11/2026 10:33:00",
+            "sizeKb": 255
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0169-AB",
+        "trackingCode": "SOP-2026-0169-AB",
+        "title": "Perfume Bleu de Chanel Eau de Parfum 100ml",
+        "category": "other",
+        "brand": "Chanel",
+        "model": "Bleu de Chanel EDP 100ml",
+        "color": "Azul Noche Profundo",
+        "distinctMarks": "Frasco de vidrio con tapa magnética con monograma CC. Nivel de contenido aproximado al 85%, dentro de neceser negro.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-16T12:15:00Z",
+        "relativeTime": "hace 2 días",
+        "estimatedValue": "$ 780.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Personal de Aseo Camerinos",
+          "contact": "+57 312 440 5566",
+          "surrenderLocation": "Camerinos del Auditorio Principal CIES",
+          "incidentRef": "INC-2026-0509"
+        },
+        "location": {
+          "zone": "Zona B - Valores y Documentos",
+          "lockerNumber": "L-28",
+          "binNumber": "Bandeja 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7932",
+        "rfidTagId": "RFID-9940210169",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Marca del neceser negro y otros artículos de cuidado personal que lo acompañan",
+          "correctHint": "Neceser marca Vélez de lona con reloj Casio negro adentro."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-28-1",
+            "title": "Recepción y Custodia",
+            "timestamp": "16/11/2026 12:15:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Artículo resguardado en casillero L-28.",
+            "hash": "456789abcdef0123456789abcdef0123456789ab123456789abcdef012345678"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-28-1",
+            "url": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=800&q=80",
+            "caption": "Frasco de vidrio oscuro sobre mesa blanca",
+            "timestamp": "16/11/2026 12:18:00",
+            "sizeKb": 220
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0170-AC",
+        "trackingCode": "SOP-2026-0170-AC",
+        "title": "Consola Portátil Nintendo Switch OLED Blanca en Estuche",
+        "category": "electronics",
+        "brand": "Nintendo",
+        "model": "Switch Modelo OLED (HEG-001)",
+        "color": "Joy-Con Blancos / Cuerpo Negro",
+        "distinctMarks": "Estuche rígido Tomtoc gris claro con 6 cartuchos físicos de juegos en las ranuras elásticas.",
+        "serialNumber": "XKW5003918274",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-16T15:00:00Z",
+        "relativeTime": "hace 2 días",
+        "estimatedValue": "$ 1.650.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Nicolás Bermúdez (Aprendiz)",
+          "contact": "+57 317 332 8899",
+          "surrenderLocation": "Zona de Descanso y Ping-Pong Bienestar",
+          "incidentRef": "INC-2026-0512"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-08",
+          "binNumber": "Bandeja 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7936",
+        "rfidTagId": "RFID-9940210170",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Nombre del perfil principal en la consola y títulos de los cartuchos en el estuche",
+          "correctHint": "Perfil \"NicoDev\" y cartuchos de Zelda Tears of the Kingdom y Mario Kart 8."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-29-1",
+            "title": "Custodia en Bóveda Electrónica",
+            "timestamp": "16/11/2026 15:00:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Consola inventariada con 6 tarjetas de juego y estuche Tomtoc.",
+            "hash": "56789abcdef0123456789abcdef0123456789ab123456789abcdef0123456789"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-29-1",
+            "url": "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?auto=format&fit=crop&w=800&q=80",
+            "caption": "Consola portátil Nintendo Switch en custodia",
+            "timestamp": "16/11/2026 15:04:00",
+            "sizeKb": 285
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0171-AD",
+        "trackingCode": "SOP-2026-0171-AD",
+        "title": "Multímetro Digital Fluke 117 True-RMS para Electricistas",
+        "category": "electronics",
+        "brand": "Fluke",
+        "model": "Fluke 117 True-RMS Multimeter",
+        "color": "Amarillo Industrial y Gris",
+        "distinctMarks": "Puntas de prueba TL75 originales, correa magnética para colgar TPAK y etiqueta de calibración SENA.",
+        "serialNumber": "FLK-48291038",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-17T08:20:00Z",
+        "relativeTime": "hace 3 días",
+        "estimatedValue": "$ 1.180.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Ing. Álvaro Vargas (Instructor Electricidad)",
+          "contact": "+57 313 889 0011",
+          "surrenderLocation": "Taller de Instalaciones Eléctricas y Automatización",
+          "incidentRef": "INC-2026-0516"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-16",
+          "binNumber": "Bandeja 02",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7940",
+        "rfidTagId": "RFID-9940210171",
+        "securityQuestion": {
+          "questionType": "HIDDEN_SERIAL",
+          "label": "Código grabado en el compartimiento de batería trasera",
+          "correctHint": "Grabado térmico \"ING. J. CARDONA - NEIVA\"."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-30-1",
+            "title": "Registro de Instrumento de Medición",
+            "timestamp": "17/11/2026 08:20:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Multímetro con puntas y estuche blando negro.",
+            "hash": "6789abcdef0123456789abcdef0123456789ab123456789abcdef0123456789a"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-30-1",
+            "url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
+            "caption": "Instrumento electrónico de precisión en taller",
+            "timestamp": "17/11/2026 08:23:00",
+            "sizeKb": 310
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0172-AE",
+        "trackingCode": "SOP-2026-0172-AE",
+        "title": "Anillo de Grado en Oro 18K con Piedra Ónice Negra",
+        "category": "jewelry",
+        "brand": "Joyería Artesanal",
+        "model": "Anillo Clásico de Graduación",
+        "color": "Oro Amarillo 18K / Ónice Negro",
+        "distinctMarks": "Escudo tallado en relieve en los laterales y fecha grabada en el arco interior.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-17T10:05:00Z",
+        "relativeTime": "hace 3 días",
+        "estimatedValue": "$ 2.200.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Auxiliar de Enfermería SENA",
+          "contact": "+57 315 221 3399",
+          "surrenderLocation": "Consultorio de Primeros Auxilios - Bienestar",
+          "incidentRef": "INC-2026-0520"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-07",
+          "binNumber": "Cofre Joyería 01",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7944",
+        "rfidTagId": "RFID-9940210172",
+        "securityQuestion": {
+          "questionType": "HIDDEN_SERIAL",
+          "label": "Iniciales y año exacto grabados por dentro del aro de oro",
+          "correctHint": "Grabado interno \"L.F.G. - 14 Dic 2024\"."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-31-1",
+            "title": "Resguardo en Bóveda de Valores",
+            "timestamp": "17/11/2026 10:05:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Joya pesada y verificada en cápsula acrílica sellada.",
+            "hash": "789abcdef0123456789abcdef0123456789ab123456789abcdef0123456789ab"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-31-1",
+            "url": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
+            "caption": "Anillo en cofre de custodia de valores",
+            "timestamp": "17/11/2026 10:08:00",
+            "sizeKb": 225
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0173-AF",
+        "trackingCode": "SOP-2026-0173-AF",
+        "title": "Morral Herschel Little America Mid-Volume Gris",
+        "category": "luggage",
+        "brand": "Herschel Supply Co.",
+        "model": "Little America Mid-Volume 17L",
+        "color": "Gris Jaspeado / Correas Café",
+        "distinctMarks": "Forro interior a rayas rojas y blancas, pin metálico de GitHub Copilot en la solapa superior.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-17T13:40:00Z",
+        "relativeTime": "hace 3 días",
+        "estimatedValue": "$ 490.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Conductora Ruta Institucional SENA",
+          "contact": "+57 310 778 4411",
+          "surrenderLocation": "Buseta Institucional SENA - Puesto Trasero",
+          "incidentRef": "INC-2026-0525"
+        },
+        "location": {
+          "zone": "Zona C - Maletines y Equipajes",
+          "lockerNumber": "L-20",
+          "binNumber": "Estante 02",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7948",
+        "rfidTagId": "RFID-9940210173",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Libro técnico y objetos guardados en el compartimiento acolchado de laptop",
+          "correctHint": "Libro \"Clean Architecture\" de Robert C. Martin y cargador USB-C blanco."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-32-1",
+            "title": "Ingreso de Equipaje",
+            "timestamp": "17/11/2026 13:40:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Morral en buen estado con libro técnico en su interior.",
+            "hash": "89abcdef0123456789abcdef0123456789ab123456789abcdef0123456789abc"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-32-1",
+            "url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+            "caption": "Morral Herschel con correas de hebilla magnética",
+            "timestamp": "17/11/2026 13:44:00",
+            "sizeKb": 295
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0174-AG",
+        "trackingCode": "SOP-2026-0174-AG",
+        "title": "Pluma Estilográfica Lamy Safari Negro Carbón Punta F",
+        "category": "other",
+        "brand": "Lamy",
+        "model": "Safari Fountain Pen Fine Nib",
+        "color": "Negro Mate (Umbra)",
+        "distinctMarks": "Viene en estuche de cuero negro para dos bolígrafos junto con un portaminas Rotring 600 metálico.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-17T15:50:00Z",
+        "relativeTime": "hace 3 días",
+        "estimatedValue": "$ 340.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Bibliotecaria Turno Tarde",
+          "contact": "+57 314 900 1122",
+          "surrenderLocation": "Mesa de Dibujo Técnico - Biblioteca Piso 2",
+          "incidentRef": "INC-2026-0529"
+        },
+        "location": {
+          "zone": "Zona B - Valores y Documentos",
+          "lockerNumber": "L-12",
+          "binNumber": "Bandeja 03",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7952",
+        "rfidTagId": "RFID-9940210174",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Color de la tinta cargada en el convertidor de la pluma Lamy",
+          "correctHint": "Tinta color verde bosque oscuro (Montblanc Irish Green)."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-33-1",
+            "title": "Registro en Custodia",
+            "timestamp": "17/11/2026 15:50:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Estuche con pluma Lamy y portaminas Rotring.",
+            "hash": "9abcdef0123456789abcdef0123456789ab123456789abcdef0123456789abcd"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-33-1",
+            "url": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=800&q=80",
+            "caption": "Instrumentos de escritura técnica en custodia",
+            "timestamp": "17/11/2026 15:53:00",
+            "sizeKb": 215
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0175-AH",
+        "trackingCode": "SOP-2026-0175-AH",
+        "title": "Gafas Ópticas Montura Acetato Oakley Pitchman R",
+        "category": "other",
+        "brand": "Oakley",
+        "model": "Pitchman R OX8105",
+        "color": "Negro Satinado Transparente",
+        "distinctMarks": "Bisagras Hollowpoint sin tornillos en acero inoxidable, lentes con filtro antirreflejo azul y estuche tubular rígido.",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-18T08:10:00Z",
+        "relativeTime": "hace 4 días",
+        "estimatedValue": "$ 860.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Javier Pinto Mora",
+          "badge": "ADSO-REC-3413988"
+        },
+        "finder": {
+          "name": "Jorge Eliécer Gaitán (Aprendiz ADSO)",
+          "contact": "+57 319 881 2233",
+          "surrenderLocation": "Laboratorio de Desarrollo Móvil - Ambiente 206",
+          "incidentRef": "INC-2026-0534"
+        },
+        "location": {
+          "zone": "Zona B - Valores y Documentos",
+          "lockerNumber": "L-09",
+          "binNumber": "Bandeja 03",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7956",
+        "rfidTagId": "RFID-9940210175",
+        "securityQuestion": {
+          "questionType": "OTHER",
+          "label": "Tipo de defecto visual o fórmula aproximada de los lentes",
+          "correctHint": "Fórmula para astigmatismo y miopía con paño azul."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-34-1",
+            "title": "Custodia de Artículo Óptico",
+            "timestamp": "18/11/2026 08:10:00",
+            "officer": "Ofc. Javier Pinto Mora",
+            "officerBadge": "ADSO-REC-3413988",
+            "status": "completed",
+            "notes": "Montura oftálmica en su estuche rígido Oakley.",
+            "hash": "abcdef0123456789abcdef0123456789ab123456789abcdef0123456789abcde"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-34-1",
+            "url": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=800&q=80",
+            "caption": "Montura oftálmica negra sobre mesa de galería",
+            "timestamp": "18/11/2026 08:13:00",
+            "sizeKb": 225
+          }
+        ]
+      },
+      {
+        "id": "SOP-2026-0176-AI",
+        "trackingCode": "SOP-2026-0176-AI",
+        "title": "Micrófono Inalámbrico DJI Mic 2 (2TX + 1RX + Estuche)",
+        "category": "electronics",
+        "brand": "DJI",
+        "model": "DJI Mic 2 Dual Wireless System",
+        "color": "Gris Sombra / Negro",
+        "distinctMarks": "Estuche de carga metálico con dos transmisores, un receptor con pantalla OLED, dos paravientos peludos y adaptadores Lightning/USB-C.",
+        "serialNumber": "DJI-MC2-774829",
+        "status": "EN_CUSTODIA",
+        "registeredAt": "2026-11-18T11:30:00Z",
+        "relativeTime": "hace 4 días",
+        "estimatedValue": "$ 1.590.000 COP",
+        "intakeOfficer": {
+          "name": "Ofc. Hernann Manchola",
+          "badge": "ADSO-3413988"
+        },
+        "finder": {
+          "name": "Equipo de Comunicaciones SENA Huila",
+          "contact": "+57 311 223 4455",
+          "surrenderLocation": "Estudio de Grabación y Emisora Institucional",
+          "incidentRef": "INC-2026-0538"
+        },
+        "location": {
+          "zone": "Zona A - Alta Seguridad",
+          "lockerNumber": "L-06",
+          "binNumber": "Bandeja 02",
+          "isLocked": true
+        },
+        "tamperSealNumber": "SEAL-2026-7960",
+        "rfidTagId": "RFID-9940210176",
+        "securityQuestion": {
+          "questionType": "INNER_CONTENTS",
+          "label": "Audio grabado en la memoria interna de 8GB del transmisor 1",
+          "correctHint": "Entrevista sobre la feria de innovación tecnológica SENNOVA Huila."
+        },
+        "failedAttempts": [],
+        "timeline": [
+          {
+            "id": "tl-35-1",
+            "title": "Ingreso de Equipo Audiovisual",
+            "timestamp": "18/11/2026 11:30:00",
+            "officer": "Ofc. Hernann Manchola",
+            "officerBadge": "ADSO-3413988",
+            "status": "completed",
+            "notes": "Kit completo en su bolsa original DJI.",
+            "hash": "bcdef0123456789abcdef0123456789ab123456789abcdef0123456789abcdef"
+          }
+        ],
+        "evidencePhotos": [
+          {
+            "id": "ev-35-1",
+            "url": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80",
+            "caption": "Kit de micrófonos profesionales en custodia",
+            "timestamp": "18/11/2026 11:33:00",
+            "sizeKb": 270
+          }
+        ]
+      }
+    ],
+    "reportes_ciudadanos": [
+      {
+        "id": "REP-2026-0081",
+        "reportType": "LOST",
+        "reportedAt": "12/11/2026 09:20",
+        "fullName": "Juan Pablo Ortiz",
+        "phone": "+57 312 987 6543",
+        "email": "j.ortiz@correo.com",
+        "category": "wallets_ids",
+        "title": "Billetera Vélez de cuero café",
+        "brand": "Vélez",
+        "color": "Café",
+        "estimatedLostPlace": "Cafetería o Bloque Tecnológico",
+        "estimatedLostDate": "12/11/2026",
+        "distinctMarks": "Tiene cédula y tarjeta Bancolombia.",
+        "matchedItemId": "SOP-2026-0143-B",
+        "status": "COINCIDENCIA_DETECTADA"
+      },
+      {
+        "id": "REP-2026-0082",
+        "reportType": "LOST",
+        "reportedAt": "11/11/2026 15:00",
+        "fullName": "Manuela Castro R.",
+        "phone": "+57 318 444 1122",
+        "email": "manuela.castro@misena.edu.co",
+        "category": "luggage",
+        "title": "Mochila negra con llavero",
+        "brand": "Totto",
+        "color": "Negro",
+        "estimatedLostPlace": "Ambiente 104",
+        "estimatedLostDate": "10/11/2026",
+        "distinctMarks": "Llavero de osito panda y cuadernos de ADSO.",
+        "status": "PENDIENTE_REVISION"
+      }
+    ]
+  }
+}
