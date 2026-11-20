@@ -1,0 +1,250 @@
+---
+name: Custodia Core
+colors:
+  surface: '#f8f9ff'
+  surface-dim: '#cbdbf5'
+  surface-bright: '#f8f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eff4ff'
+  surface-container: '#e5eeff'
+  surface-container-high: '#dce9ff'
+  surface-container-highest: '#d3e4fe'
+  on-surface: '#0b1c30'
+  on-surface-variant: '#45464d'
+  inverse-surface: '#213145'
+  inverse-on-surface: '#eaf1ff'
+  outline: '#76777d'
+  outline-variant: '#c6c6cd'
+  surface-tint: '#565e74'
+  primary: '#000000'
+  on-primary: '#ffffff'
+  primary-container: '#131b2e'
+  on-primary-container: '#7c839b'
+  inverse-primary: '#bec6e0'
+  secondary: '#4059aa'
+  on-secondary: '#ffffff'
+  secondary-container: '#8fa7fe'
+  on-secondary-container: '#1d3989'
+  tertiary: '#000000'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#001d31'
+  on-tertiary-container: '#188ace'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#dae2fd'
+  primary-fixed-dim: '#bec6e0'
+  on-primary-fixed: '#131b2e'
+  on-primary-fixed-variant: '#3f465c'
+  secondary-fixed: '#dce1ff'
+  secondary-fixed-dim: '#b6c4ff'
+  on-secondary-fixed: '#00164e'
+  on-secondary-fixed-variant: '#264191'
+  tertiary-fixed: '#cce5ff'
+  tertiary-fixed-dim: '#93ccff'
+  on-tertiary-fixed: '#001d31'
+  on-tertiary-fixed-variant: '#004b73'
+  background: '#f8f9ff'
+  on-background: '#0b1c30'
+  surface-variant: '#d3e4fe'
+typography:
+  display:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 44px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 30px
+    fontWeight: '700'
+    lineHeight: 38px
+    letterSpacing: -0.015em
+  headline-lg-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 24px
+    fontWeight: '700'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 28px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 24px
+  title-md:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 22px
+  title-sm:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  label-lg:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '500'
+    lineHeight: 20px
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '700'
+    lineHeight: 14px
+    letterSpacing: 0.04em
+  code-tracking:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '600'
+    lineHeight: 18px
+    letterSpacing: 0.06em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 0.75rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+This design system is engineered specifically for institutional chain-of-custody tracking, high-volume reception desks, security offices, and enterprise lost-and-found operations. The visual atmosphere balances bureaucratic precision with effortless operational speed.
+
+### Brand Personality & Core Attributes
+- **Incorruptible & Institutional:** Conveys cryptographic rigor, legal compliance, and reliable record-keeping. The interface does not feel decorative; every element serves auditability and verification.
+- **Calm Under Friction:** Lost property interactions are often stressful. The UI projects authority, quiet confidence, and clarity, lowering cognitive load for both staff and claimants.
+- **Surgical Utility:** Optimized for high-throughput touchpoint devices (countertop tablets, check-in terminals, and dual-monitor dispatch desks). Visual clutter is rigorously eliminated.
+
+### Design Movement: Modern Corporate Precision
+The design system adopts a structured, hyper-legible modern enterprise style. It leverages high-fidelity surface tokens, structured modular cards, crisp border demarcation, and semantic status markers. Contrast ratios adhere strictly to WCAG AAA standards across all transactional touchpoints and security indicators.
+
+## Colors
+
+The palette reinforces institutional security, distinct operational statuses, and unambiguous verification.
+
+### Core Roles
+- **Primary (`#0F172A` - Slate 900):** Anchor tone for institutional headers, high-level navigation, primary visual anchors, and highest-priority interactive actions.
+- **Secondary (`#1E3A8A` - Navy 900):** Deep institutional blue used for operational toolbars, active navigation states, and secure custody headers.
+- **Tertiary (`#0284C7` - Cyan 600):** Digital verification accent, used for scanning confirmations, asset tags, barcode highlights, and informational badges.
+- **Interactive Accent (`#2563EB` - Cobalt 600):** Focus rings, standard primary buttons, actionable links, and selected table states.
+- **Neutral (`#64748B` - Slate 500):** Structural lines, subtle secondary copy, timestamp metadata, and unselected states.
+
+### Operational State Tokens
+- **`status-custody` / Success (`#059669` / `#10B981`):** Applied exclusively to items registered under official custody (`EN_CUSTODIA`), successful handoff signatures, and verified claims. Must be paired with high-contrast emerald surface tints (`#ECFDF5`).
+- **`status-warning` / Audit Alert (`#D97706`):** For unmatched reports, pending identity validations, custody expiration warnings, and failed claimant matching attempts. Paired with warm amber surfaces (`#FFFBEB`).
+- **`status-critical` / Security Lock (`#DC2626`):** Reserved strictly for critical security flags (`BLOQUEADO_POR_SEGURIDAD`), reported theft overlaps, and restricted police holds. Paired with crimson backgrounds (`#FEF2F2`).
+
+## Typography
+
+The type system combines **Plus Jakarta Sans** for structural headers with **Inter** for dense transactional UI, data grids, and audit forms.
+
+### Hierarchy & Operational Usage
+- **Structural Headings:** Plus Jakarta Sans provides clean, confident forms without excessive ornamentation. Used in window dashboards, incident reports, and custody handoff screens.
+- **Tabular & Operational Data:** Inter delivers neutral, hyper-legible rendering across inventory rows, serial numbers, citizen IDs, and chain-of-custody logs.
+- **Tracking Identifiers (`code-tracking`):** Used for item identifiers (e.g., `CUST-2024-8891-B`), shelf locations, and hardware locker slots. Must be rendered in tabular figures (`font-variant-numeric: tabular-nums`) with slight positive tracking for rapid cross-referencing against physical barcode stickers.
+
+## Layout & Spacing
+
+The layout is built upon an adaptive 12-column grid system tuned for counter-top tablets (landscape 1024px+), administrative workstations (1440px+), and intake handhelds (mobile viewports).
+
+### Layout System
+- **Desktop (1200px+):** 12-column layout with 24px (`1.5rem`) gutters and 32px (`2rem`) outer canvas margins. Maximizes split-screen efficiency: search/intake queue on the left (4 columns), item inspection/evidence details on the right (8 columns).
+- **Tablet / Front Counter (768px - 1199px):** 8-column layout with 16px gutters and 24px margins. Tailored for touch validation, intake forms, and signature pads.
+- **Mobile Handheld (320px - 767px):** 4-column layout with 12px gutters and 16px canvas margins. Stacked cards and pinned bottom action bars for single-handed item registration.
+
+### Spacing Density Principles
+- **Dense Data Zones:** Item tables, chain-of-custody logs, and asset matrices rely on `space-xs` and `space-sm` increments to keep maximum information above the fold.
+- **Touch Targets:** Any interactive touchpoint (claim signature confirmation, drawer release button, intake submission) maintains a minimum height of 44px on desktop and 48px on counter-top tablet modes.
+
+## Elevation & Depth
+
+Visual depth is achieved through layered structural borders combined with soft, low-intensity ambient shadows. This prevents glare and visual fatigue on desk monitors and counter tablets.
+
+### Surface Elevation Scale
+- **Level 0 (Canvas Base):** Tinted neutral slate (`#F8FAFC`). Holds structural frame components and fixed navigation bars.
+- **Level 1 (Cards & Data Panels):** Pure white (`#FFFFFF`) framed with a 1px crisp outline in `#E2E8F0`. Shadow: `0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.03)`.
+- **Level 2 (Active Cards & Dropdown Menus):** Elevated white surface. Shadow: `0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05)`. Border: `#CBD5E1`.
+- **Level 3 (Modals, Evidence Viewers, Handoff Signature Modals):** High-layer white surface. Shadow: `0 20px 25px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.06)`. Accompanied by a 60% opacity `#0F172A` backdrop scrim.
+
+### Security Elevation Rule
+Critically locked cards (`BLOQUEADO_POR_SEGURIDAD`) abandon subtle shadows in favor of a 2px rigid inset border (`#DC2626`) paired with a high-visibility crimson status bar across the top edge.
+
+## Shapes
+
+The design system employs a **Rounded** profile (level 2). Radii provide a human, approachable feel without compromising institutional rigidity.
+
+### Radius Assignments
+- **Containers & Master Cards (`rounded-lg` / `1rem`):** Main item detail sheets, intake panels, and warehouse locker summary cards.
+- **Interactive Controls & Inputs (`0.5rem`):** Search bars, text inputs, action buttons, table rows, and claimant signature zones.
+- **Pill Badges (`9999px`):** Status badges (Custody, Claimed, Disposed) use full pill shapes to distinguish them from actionable square-corner buttons.
+- **Nested Inner Surfaces (`0.375rem`):** Evidence thumbnails, barcode panels, and camera viewfinder boxes nested within cards inherit a reduced radius to maintain geometric harmony.
+
+## Components
+
+### Status Badges
+Status indicators are central to lost and found operations. They feature bold, legible typography (`label-sm`), high-contrast backgrounds, and 1px border accents:
+- **`EN_CUSTODIA` (In Custody):** Background `#ECFDF5`, text `#065F46`, border `#A7F3D0`. Includes a solid emerald dot prefix.
+- **`ENTREGADO` (Delivered/Claimed):** Background `#EFF6FF`, text `#1E40AF`, border `#BFDBFE`.
+- **`ADVERTENCIA` / Attempt Match Failed:** Background `#FFFBEB`, text `#92400E`, border `#FDE68A`.
+- **`BLOQUEADO_POR_SEGURIDAD` (Security Hold):** Background `#FEF2F2`, text `#991B1B`, border `#FECACA`. Uppercase with a shield or lock icon prefix.
+
+### Buttons
+- **Primary Institutional:** `#0F172A` background, white label, subtle hover tint to `#1E293B`. For terminal-level actions (Submit Return, Print Asset Tag).
+- **Interactive Action:** `#2563EB` background, white label, hover state `#1D4ED8`. For active queue browsing and filter toggling.
+- **Security Destructive:** `#DC2626` background, white label, hover `#B91C1C`. For incident flagging and locking assets.
+- **Secondary / Ghost:** Transparent background, 1px `#CBD5E1` border, `#0F172A` label. Hover brings background `#F1F5F9`.
+
+### Input Fields & Search Bars
+- Standard inputs feature a 1px border in `#CBD5E1` on pure white with `0.5rem` corner radius.
+- Height: 44px on desktop, 48px on tablet/touch mode.
+- Focus state: 2px outline in `#2563EB` with an offset of 1px.
+- Barcode / RFID entry fields include an automatic scanning strobe indicator in `#0284C7`.
+
+### Cards & Inventory Record Modules
+- Base card: White background, 1px `#E2E8F0` border, `rounded-lg` (16px).
+- Header zone contains the tracking code in tabular monospace, relative registration time, and the pill status badge.
+- Body displays item categorization, brand, distinct physical marks, and high-contrast thumbnail evidence.
+- Footer features security officer metadata, assigned warehouse zone, and drawer bin coordinates.
+
+### Specialized Component: Chain-of-Custody Timeline
+- Linear vertical node tracker marking item intake, transfer between lockers, claimant validation attempts, and final signature handoff.
+- Completed steps display `#059669` connectors; security-held steps display `#DC2626` warning markers with timestamped officer credentials.

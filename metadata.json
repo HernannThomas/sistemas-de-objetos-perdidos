@@ -1,0 +1,6 @@
+{
+  "name": "Custodia Core",
+  "description": "Institutional chain-of-custody tracking, high-volume reception desk and enterprise lost-and-found management system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
