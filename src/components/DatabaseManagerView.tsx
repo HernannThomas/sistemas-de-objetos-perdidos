@@ -455,6 +455,38 @@ export const DatabaseManagerView: React.FC<DatabaseManagerViewProps> = ({
                     <span>Probar</span>
                   </button>
                 </div>
+
+                <div className="flex items-center justify-between p-3 rounded-[2px] bg-[#f7f7f7] border border-[#ebebeb]">
+                  <div>
+                    <span className="font-mono font-bold text-black">GET /api/v1/docs</span>
+                    <p className="text-[11px] text-[#b5b5b5]">Especificación OpenAPI 3.0 (Documentación REST)</p>
+                  </div>
+                  <button
+                    type="button"
+                    disabled={isTestingApi}
+                    onClick={() => handleTestEndpoint('GET', '/api/v1/docs')}
+                    className="rounded-full bg-black text-white px-3.5 py-1.5 text-[11px] font-medium hover:bg-neutral-800 transition cursor-pointer flex items-center gap-1"
+                  >
+                    <Send className="h-3 w-3" />
+                    <span>Probar</span>
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between p-3 rounded-[2px] bg-[#f7f7f7] border border-[#ebebeb]">
+                  <div>
+                    <span className="font-mono font-bold text-black">GET /api/v1/reports</span>
+                    <p className="text-[11px] text-[#b5b5b5]">Reportes ciudadanos (Requiere JWT Bearer válido)</p>
+                  </div>
+                  <button
+                    type="button"
+                    disabled={isTestingApi}
+                    onClick={() => handleTestEndpoint('GET', '/api/v1/reports')}
+                    className="rounded-full bg-black text-white px-3.5 py-1.5 text-[11px] font-medium hover:bg-neutral-800 transition cursor-pointer flex items-center gap-1"
+                  >
+                    <Send className="h-3 w-3" />
+                    <span>Probar</span>
+                  </button>
+                </div>
               </div>
 
               {apiTestResult && (

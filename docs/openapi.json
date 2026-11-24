@@ -1,0 +1,177 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Custodia.Space API REST — SENA CIES Neiva (ADSO 3413988)",
+    "version": "1.0.0",
+    "description": "API REST para la gestión, custodia, validación de propiedad y restitución de objetos perdidos. Incluye autenticación JWT (HMAC-SHA256), autorización RBAC y persistencia en MySQL XAMPP."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5173/api/v1",
+      "description": "Servidor Local Vite + MySQL XAMPP (127.0.0.1:3306)"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "tags": ["Autenticación"],
+        "summary": "Iniciar sesión y obtener Token JWT",
+        "responses": {
+          "200": { "description": "Autenticación exitosa con token Bearer" },
+          "401": { "description": "Credenciales inválidas" }
+        }
+      }
+    },
+    "/auth/register": {
+      "post": {
+        "tags": ["Autenticación"],
+        "summary": "Registrar nueva cuenta con rol inicial Cliente (user)",
+        "responses": {
+          "201": { "description": "Cuenta creada con rol user y token JWT" },
+          "409": { "description": "Correo electrónico ya registrado" }
+        }
+      }
+    },
+    "/auth/me": {
+      "get": {
+        "tags": ["Autenticación"],
+        "summary": "Verificar token JWT activo y permisos RBAC",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Token válido y permisos retornados" },
+          "401": { "description": "Token ausente, inválido o expirado" }
+        }
+      }
+    },
+    "/items/public": {
+      "get": {
+        "tags": ["Objetos en Custodia"],
+        "summary": "Consultar catálogo público de objetos activos",
+        "responses": {
+          "200": { "description": "Lista pública sin datos confidenciales" }
+        }
+      }
+    },
+    "/items": {
+      "get": {
+        "tags": ["Objetos en Custodia"],
+        "summary": "Listar todos los expedientes completos (employee, admin)",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Lista completa de objetos" },
+          "403": { "description": "Prohibido para rol user" }
+        }
+      },
+      "post": {
+        "tags": ["Objetos en Custodia"],
+        "summary": "Crear nuevo objeto en custodia (employee, admin)",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "201": { "description": "Objeto creado exitosamente" },
+          "403": { "description": "Sin permisos de escritura" }
+        }
+      }
+    },
+    "/items/{id}": {
+      "get": {
+        "tags": ["Objetos en Custodia"],
+        "summary": "Obtener detalle completo de un objeto",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Objeto encontrado" }, "404": { "description": "No encontrado" } }
+      },
+      "put": {
+        "tags": ["Objetos en Custodia"],
+        "summary": "Actualizar expediente de un objeto",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Objeto actualizado" } }
+      },
+      "delete": {
+        "tags": ["Objetos en Custodia"],
+        "summary": "Eliminar un objeto de la base de datos",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Objeto eliminado" } }
+      }
+    },
+    "/items/{id}/claim-attempt": {
+      "post": {
+        "tags": ["Objetos en Custodia"],
+        "summary": "Registrar intento de reclamo por cliente (bloqueo al 4to fallo)",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Intento registrado" } }
+      }
+    },
+    "/reports": {
+      "get": {
+        "tags": ["Reportes Ciudadanos"],
+        "summary": "Listar reportes de pérdida y hallazgo",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { "200": { "description": "Listado de reportes" } }
+      },
+      "post": {
+        "tags": ["Reportes Ciudadanos"],
+        "summary": "Radicar un nuevo reporte ciudadano",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { "201": { "description": "Reporte creado" } }
+      }
+    },
+    "/reports/{id}": {
+      "put": {
+        "tags": ["Reportes Ciudadanos"],
+        "summary": "Actualizar un reporte ciudadano",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Reporte actualizado" } }
+      },
+      "delete": {
+        "tags": ["Reportes Ciudadanos"],
+        "summary": "Eliminar un reporte ciudadano",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Reporte eliminado" } }
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": ["Usuarios y Roles (RF-02)"],
+        "summary": "Listar usuarios y roles (Exclusivo admin)",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { "200": { "description": "Directorio de usuarios" }, "403": { "description": "Solo admin" } }
+      },
+      "post": {
+        "tags": ["Usuarios y Roles (RF-02)"],
+        "summary": "Crear usuario desde administración (Exclusivo admin)",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { "201": { "description": "Usuario creado" } }
+      }
+    },
+    "/users/{id}": {
+      "put": {
+        "tags": ["Usuarios y Roles (RF-02)"],
+        "summary": "Editar rol o datos de usuario (Exclusivo admin)",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Usuario actualizado" } }
+      },
+      "delete": {
+        "tags": ["Usuarios y Roles (RF-02)"],
+        "summary": "Eliminar usuario (Exclusivo admin)",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Usuario eliminado" } }
+      }
+    }
+  }
+}

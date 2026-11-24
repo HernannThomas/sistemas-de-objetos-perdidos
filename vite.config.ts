@@ -626,6 +626,111 @@ function xamppMySqlRestApiPlugin(): Plugin {
             });
           }
 
+          // POST /api/v1/items — CRUD CREATE de Objeto en Custodia ('employee' | 'admin')
+          if (url === '/items' && method === 'POST') {
+            const verification = verifyJwt(authHeader);
+            if (!verification.valid || !verification.payload) {
+              return sendJson(res, 401, { ok: false, error: verification.error });
+            }
+            const userRole = verification.payload.role;
+            if (userRole !== 'employee' && userRole !== 'admin') {
+              return sendJson(res, 403, {
+                ok: false,
+                error: `403 Forbidden (RBAC): El rol '${userRole}' no puede crear registros de custodia.`,
+              });
+            }
+            const newItem = await readBody(req);
+            if (!newItem?.title || !newItem?.brand) {
+              return sendJson(res, 400, { ok: false, error: 'Título y marca son obligatorios.' });
+            }
+            const created = {
+              ...newItem,
+              id: newItem.id || `SOP-2026-${Math.floor(1000 + Math.random() * 9000)}`,
+              trackingCode: newItem.trackingCode || newItem.id || `SOP-2026-${Math.floor(1000 + Math.random() * 9000)}`,
+              status: newItem.status || 'EN_CUSTODIA',
+              registeredAt: newItem.registeredAt || new Date().toISOString(),
+              failedAttempts: newItem.failedAttempts || [],
+              timeline: newItem.timeline || [],
+              evidencePhotos: newItem.evidencePhotos || [],
+            };
+            db.tables.objetos_custodia.unshift(created);
+            await persistDatabaseState(db);
+            return sendJson(res, 201, { ok: true, endpoint: 'POST /api/v1/items', item: created });
+          }
+
+          // GET / PUT / DELETE /api/v1/items/:id
+          if (url.startsWith('/items/') && !url.endsWith('/claim-attempt')) {
+            const itemId = decodeURIComponent(url.replace('/items/', '').trim());
+            const verification = verifyJwt(authHeader);
+            if (!verification.valid || !verification.payload) {
+              return sendJson(res, 401, { ok: false, error: verification.error });
+            }
+            const userRole = verification.payload.role;
+            if (userRole !== 'employee' && userRole !== 'admin') {
+              return sendJson(res, 403, {
+                ok: false,
+                error: `403 Forbidden (RBAC): Acceso restringido a personal de custodia.`,
+              });
+            }
+            const idx = db.tables.objetos_custodia.findIndex((i: any) => i.id === itemId || i.trackingCode === itemId);
+            if (idx === -1) {
+              return sendJson(res, 404, { ok: false, error: `Objeto '${itemId}' no encontrado.` });
+            }
+            if (method === 'GET') {
+              return sendJson(res, 200, { ok: true, item: db.tables.objetos_custodia[idx] });
+            }
+            if (method === 'PUT' || method === 'PATCH') {
+              const updates = await readBody(req);
+              db.tables.objetos_custodia[idx] = { ...db.tables.objetos_custodia[idx], ...updates };
+              await persistDatabaseState(db);
+              return sendJson(res, 200, { ok: true, endpoint: `PUT /api/v1/items/${itemId}`, item: db.tables.objetos_custodia[idx] });
+            }
+            if (method === 'DELETE') {
+              const removed = db.tables.objetos_custodia.splice(idx, 1)[0];
+              await persistDatabaseState(db);
+              return sendJson(res, 200, { ok: true, endpoint: `DELETE /api/v1/items/${itemId}`, deletedId: removed.id });
+            }
+          }
+
+          // POST /api/v1/items/:id/claim-attempt — Registro de intento de reclamo por cliente
+          if (url.startsWith('/items/') && url.endsWith('/claim-attempt') && method === 'POST') {
+            const verification = verifyJwt(authHeader);
+            if (!verification.valid || !verification.payload) {
+              return sendJson(res, 401, { ok: false, error: verification.error });
+            }
+            const itemId = decodeURIComponent(url.replace('/items/', '').replace('/claim-attempt', '').trim());
+            const idx = db.tables.objetos_custodia.findIndex((i: any) => i.id === itemId || i.trackingCode === itemId);
+            if (idx === -1) {
+              return sendJson(res, 404, { ok: false, error: `Objeto '${itemId}' no encontrado.` });
+            }
+            const attempt = await readBody(req);
+            const item = db.tables.objetos_custodia[idx];
+            const newAtt = {
+              id: 'att-' + Date.now(),
+              timestamp: new Date().toLocaleString('es-CO'),
+              userId: verification.payload.sub,
+              userEmail: verification.payload.email,
+              claimantName: attempt.claimantName || verification.payload.name,
+              idType: attempt.idType || 'CC',
+              idNumber: attempt.idNumber || 'Cliente',
+              phone: attempt.phone || 'N/A',
+              percentageScore: Number(attempt.percentageScore || 0),
+              reason: attempt.reason || 'Validación insuficiente (< 70%)',
+              officer: 'API REST Portal Cliente',
+            };
+            item.failedAttempts = [...(item.failedAttempts || []), newAtt];
+            const clientFailCount = item.failedAttempts.filter(
+              (a: any) => a.userId === verification.payload!.sub || a.userEmail === verification.payload!.email
+            ).length;
+            await persistDatabaseState(db);
+            return sendJson(res, 200, {
+              ok: true,
+              clientAttempts: clientFailCount,
+              clientBlocked: clientFailCount >= 4,
+              attempt: newAtt,
+            });
+          }
+
           // GET /api/v1/users — Requiere Exclusivamente Rol 'admin' (RF-02)
           if (url === '/users' && method === 'GET') {
             const verification = verifyJwt(authHeader);
@@ -656,19 +761,131 @@ function xamppMySqlRestApiPlugin(): Plugin {
             });
           }
 
-          // GET /api/v1/reports — Requiere Autenticación (cualquier rol autenticado)
-          if (url === '/reports' && method === 'GET') {
+          // POST /api/v1/users — CRUD CREATE de Usuario (Exclusivo 'admin')
+          if (url === '/users' && method === 'POST') {
             const verification = verifyJwt(authHeader);
             if (!verification.valid || !verification.payload) {
               return sendJson(res, 401, { ok: false, error: verification.error });
             }
-            return sendJson(res, 200, {
-              ok: true,
-              endpoint: 'GET /api/v1/reports',
-              authorizedRole: verification.payload.role,
-              total: db.tables.reportes_ciudadanos.length,
-              reports: db.tables.reportes_ciudadanos,
-            });
+            if (verification.payload.role !== 'admin') {
+              return sendJson(res, 403, { ok: false, error: '403 Forbidden: Solo admin puede crear usuarios administrativos.' });
+            }
+            const body = await readBody(req);
+            if (!body?.name || !body?.email) {
+              return sendJson(res, 400, { ok: false, error: 'Nombre y correo son obligatorios.' });
+            }
+            const createdUser = {
+              id: body.id || 'user-' + Date.now(),
+              name: String(body.name).trim(),
+              email: String(body.email).toLowerCase().trim(),
+              password: body.password || '123456',
+              role: body.role || 'user',
+              badgeNumber: body.badgeNumber,
+              department: body.department || 'Comunidad Educativa y Clientes',
+              phone: body.phone,
+              status: body.status || 'ACTIVO',
+              createdAt: new Date().toLocaleDateString('es-CO'),
+            };
+            db.tables.usuarios.unshift(createdUser);
+            await persistDatabaseState(db);
+            return sendJson(res, 201, { ok: true, endpoint: 'POST /api/v1/users', user: createdUser });
+          }
+
+          // PUT / DELETE /api/v1/users/:id — CRUD UPDATE & DELETE de Usuario (Exclusivo 'admin')
+          if (url.startsWith('/users/')) {
+            const targetUserId = decodeURIComponent(url.replace('/users/', '').trim());
+            const verification = verifyJwt(authHeader);
+            if (!verification.valid || !verification.payload) {
+              return sendJson(res, 401, { ok: false, error: verification.error });
+            }
+            if (verification.payload.role !== 'admin') {
+              return sendJson(res, 403, { ok: false, error: '403 Forbidden: Exclusivo Administrador.' });
+            }
+            const idx = db.tables.usuarios.findIndex((u: any) => u.id === targetUserId);
+            if (idx === -1) {
+              return sendJson(res, 404, { ok: false, error: `Usuario '${targetUserId}' no encontrado.` });
+            }
+            if (method === 'PUT' || method === 'PATCH') {
+              const updates = await readBody(req);
+              db.tables.usuarios[idx] = { ...db.tables.usuarios[idx], ...updates };
+              await persistDatabaseState(db);
+              return sendJson(res, 200, { ok: true, endpoint: `PUT /api/v1/users/${targetUserId}`, user: db.tables.usuarios[idx] });
+            }
+            if (method === 'DELETE') {
+              if (verification.payload.sub === targetUserId) {
+                return sendJson(res, 400, { ok: false, error: 'No puedes eliminar tu propia cuenta en sesión.' });
+              }
+              db.tables.usuarios.splice(idx, 1);
+              await persistDatabaseState(db);
+              return sendJson(res, 200, { ok: true, endpoint: `DELETE /api/v1/users/${targetUserId}`, deletedId: targetUserId });
+            }
+          }
+
+          // GET / POST /api/v1/reports — CRUD READ & CREATE de Reportes Ciudadanos
+          if (url === '/reports') {
+            const verification = verifyJwt(authHeader);
+            if (!verification.valid || !verification.payload) {
+              return sendJson(res, 401, { ok: false, error: verification.error });
+            }
+            if (method === 'GET') {
+              return sendJson(res, 200, {
+                ok: true,
+                endpoint: 'GET /api/v1/reports',
+                authorizedRole: verification.payload.role,
+                total: db.tables.reportes_ciudadanos.length,
+                reports: db.tables.reportes_ciudadanos,
+              });
+            }
+            if (method === 'POST') {
+              const body = await readBody(req);
+              if (!body?.title || !body?.fullName) {
+                return sendJson(res, 400, { ok: false, error: 'Título y nombre son obligatorios.' });
+              }
+              const newRep = {
+                ...body,
+                id: body.id || 'REP-2026-' + Math.floor(1000 + Math.random() * 9000),
+                reportedAt: body.reportedAt || new Date().toLocaleString('es-CO'),
+                status: body.status || 'PENDIENTE_REVISION',
+              };
+              db.tables.reportes_ciudadanos.unshift(newRep);
+              await persistDatabaseState(db);
+              return sendJson(res, 201, { ok: true, endpoint: 'POST /api/v1/reports', report: newRep });
+            }
+          }
+
+          // PUT / DELETE /api/v1/reports/:id — CRUD UPDATE & DELETE de Reportes
+          if (url.startsWith('/reports/')) {
+            const repId = decodeURIComponent(url.replace('/reports/', '').trim());
+            const verification = verifyJwt(authHeader);
+            if (!verification.valid || !verification.payload) {
+              return sendJson(res, 401, { ok: false, error: verification.error });
+            }
+            const idx = db.tables.reportes_ciudadanos.findIndex((r: any) => r.id === repId);
+            if (idx === -1) {
+              return sendJson(res, 404, { ok: false, error: `Reporte '${repId}' no encontrado.` });
+            }
+            if (method === 'PUT' || method === 'PATCH') {
+              const updates = await readBody(req);
+              db.tables.reportes_ciudadanos[idx] = { ...db.tables.reportes_ciudadanos[idx], ...updates };
+              await persistDatabaseState(db);
+              return sendJson(res, 200, { ok: true, endpoint: `PUT /api/v1/reports/${repId}`, report: db.tables.reportes_ciudadanos[idx] });
+            }
+            if (method === 'DELETE') {
+              db.tables.reportes_ciudadanos.splice(idx, 1);
+              await persistDatabaseState(db);
+              return sendJson(res, 200, { ok: true, endpoint: `DELETE /api/v1/reports/${repId}`, deletedId: repId });
+            }
+          }
+
+          // GET /api/v1/docs — Especificación OpenAPI 3.0 en vivo
+          if (url === '/docs' && method === 'GET') {
+            const openApiPath = path.resolve(__dirname, './docs/openapi.json');
+            if (fs.existsSync(openApiPath)) {
+              res.setHeader('Content-Type', 'application/json');
+              res.statusCode = 200;
+              res.end(fs.readFileSync(openApiPath, 'utf-8'));
+              return;
+            }
           }
 
           next();
